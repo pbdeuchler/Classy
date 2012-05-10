@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import division
 from collections import Counter
 import math
-from future import division
 
 class ClassifierNotTrainedException(Exception):
 	
