@@ -8,7 +8,6 @@ Classy is an MIT liscensed library written in Python.
 Classy is built for simplistic document classification, and is built with web application usage in mind. Classy simplifies
 the process down for you, so all you need to do is train it.
 
-::
 
 	>>> c = Classy()
 	>>> c.train(['cpu', 'RAM', 'ALU', 'io', 'bridge', 'disk'], 'architecture')
@@ -40,6 +39,7 @@ Fork/clone and pull the code to your local machine and run:
 
 Contribute
 ----------
+ 
 
 #. Check for open issues or open a fresh issue to start a discussion around a feature idea or a bug. There is a Contributor Friendly tag for issues that should be ideal for people who are not very familiar with the codebase yet.
 #. Fork `the repository`_ on Github to start making your changes to the **develop** branch (or branch off of it).
