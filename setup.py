@@ -15,6 +15,7 @@
 #  											   $$$$$$/ 
 
 from distutils.core import setup
+import os
 
 def get_file_contents(file_path):
   """Get the context of the file using full path name"""
@@ -23,7 +24,7 @@ def get_file_contents(file_path):
 
 setup(
 	name='Classy',
-	version=classy.__version__,
+	version= classy.__version__,
 	author='Philip Deuchler',
 	author_email='pbdeuchler@gmail.com',
 	packages=['classy', 'classy.Classy', 'classy.adapters'],
