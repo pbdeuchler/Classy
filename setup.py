@@ -17,6 +17,11 @@
 from distutils.core import setup
 import os
 
+
+if sys.argv[-1] == 'publish':
+	os.system('python setup.py sdist upload')
+	sys.exit()
+
 def get_file_contents(file_path):
   """Get the context of the file using full path name"""
   full_path = os.path.join(package_directory, file_path)
