@@ -1,0 +1,1 @@
+Requests is written and maintained by Philip Deuchler
