@@ -3,7 +3,7 @@ Classy: A naive bayes classifier package for Python
 
 Bayes all the things!
 
-Classy is an MIT liscensed library written in Python.
+Classy is an MIT licensed library written in Python.
 
 Classy is built for simplistic document classification, and is built with web application usage in mind. Classy simplifies
 the process down for you, so all you need to do is train it.
