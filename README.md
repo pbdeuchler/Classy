@@ -11,11 +11,14 @@ the process down for you, so all you need to do is train it.
 
 	>>> c = Classy()
 	>>> c.train(['cpu', 'RAM', 'ALU', 'io', 'bridge', 'disk'], 'architecture')
+	True
 	>>> c.train(['monitor', 'mouse', 'keyboard', 'microphone', 'headphones'], 'input_devices')
+	True
 	>>> c.train(['desk', 'chair', 'cabinet', 'lamp'], 'office furniture')
+	True
 	>>> my_office = ['cpu', 'monitor', 'mouse', 'chair']
 	>>> c.classify(my_office)
-	('input_devices', -7.58003228654052)
+	('input_devices', -1.0986122886681098)
 	...
 
 Classy has been designed with dynamicism in mind, so it will work with any range of uses- blog entry categorization, ir systems, tag clouds, reccomendation engines and so on.

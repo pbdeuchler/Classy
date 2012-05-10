@@ -31,7 +31,7 @@ class Classy(object):
 			try:
 				self.term_count_store[class_id][term] += count[term]
 			except KeyError:
-				self.term_count_Store[class_id][term] = count[term]
+				self.term_count_store[class_id][term] = count[term]
 		try:
 			self.data['class_term_count'][class_id] += document_source.__len__()
 		except KeyError:
@@ -40,9 +40,9 @@ class Classy(object):
 			self.data['class_doc_count'][class_id] += 1
 		except KeyError:
 			self.data['class_doc_count'][class_id] = 1
-		self.compute_beta_priors()
 		self.total_term_count += document_source.__len__()
 		self.total_doc_count += 1
+		self.compute_beta_priors()
 		return True
 		
 	def classify(self, document_input):
@@ -62,7 +62,7 @@ class Classy(object):
 			arg_max = summation + self.data['beta_priors'][class_id]
 			arg_max_matrix.insert(0, (class_id, arg_max))
 		arg_max_matrix.sort(key=lambda x:x[1])
-		return arg_max_matrix[-1][0]
+		return (arg_max_matrix[-1][0], arg_max_matrix[-1][1])
 		
 	def compute_beta_priors(self):
 		if not self.total_doc_count: raise ClassifierNotTrainedException()
