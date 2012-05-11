@@ -3,10 +3,10 @@
 History
 -------
 
-0.0.3 - 0.0.5 (2012-05-10)
+0.0.3 - 0.0.7 (2012-05-10)
 ++++++++++++++++++
 
-* Working out packaging kinks
+* Working out packaging/pypi kinks
 
 0.0.2 (2012-05-10)
 ++++++++++++++++++
