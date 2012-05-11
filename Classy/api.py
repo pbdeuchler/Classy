@@ -22,6 +22,10 @@ class Classy(object):
 		self.total_doc_count = 0
 		
 	def train(self, document_source, class_id):
+		'''
+		Trains the classifier.
+		
+		'''
 		count = Counter(document_source)
 		try:
 			self.term_count_store[class_id]

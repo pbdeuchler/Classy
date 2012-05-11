@@ -1,33 +1,39 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-#    ______   __                                        
-#   /      \ /  |                                       
-#  /$$$$$$  |$$ |  ______    _______  _______  __    __ 
-#  $$ |  $$/ $$ | /      \  /       |/       |/  |  /  |
-#  $$ |      $$ | $$$$$$  |/$$$$$$$//$$$$$$$/ $$ |  $$ |
-#  $$ |   __ $$ | /    $$ |$$      \$$      \ $$ |  $$ |
-#  $$ \__/  |$$ |/$$$$$$$ | $$$$$$  |$$$$$$  |$$ \__$$ |
-#  $$    $$/ $$ |$$    $$ |/     $$//     $$/ $$    $$ |
-#   $$$$$$/  $$/  $$$$$$$/ $$$$$$$/ $$$$$$$/   $$$$$$$ |
-#  										      /  \__$$ |
-#  										      $$    $$/ 
-#  											   $$$$$$/ 
+''' 
+    _____   __                                        
+   /      \ /  |                                       
+  /$$$$$$  |$$ |  ______    _______  _______  __    __ 
+  $$ |  $$/ $$ | /      \  /       |/       |/  |  /  |
+  $$ |      $$ | $$$$$$  |/$$$$$$$//$$$$$$$/ $$ |  $$ |
+  $$ |   __ $$ | /    $$ |$$      \$$      \ $$ |  $$ |
+  $$ \__/  |$$ |/$$$$$$$ | $$$$$$  |$$$$$$  |$$ \__$$ |
+  $$    $$/ $$ |$$    $$ |/     $$//     $$/ $$    $$ |
+   $$$$$$/  $$/  $$$$$$$/ $$$$$$$/ $$$$$$$/   $$$$$$$ |
+  										     /  \__$$ |
+  										     $$    $$/ 
+  									  		  $$$$$$/ 
+'''
+
 
 from distutils.core import setup
 import Classy
 import os
 import sys
 
-
 if sys.argv[-1] == 'publish':
 	os.system('python setup.py sdist upload')
 	sys.exit()
-
-def get_file_contents(file_path):
-  """Get the context of the file using full path name"""
-  full_path = os.path.join(package_directory, file_path)
-  return open(full_path, 'r').read()
+	
+if sys.argv[-1] == 'uninstall':
+	os.system('pip uninstall Classy')
+	sys.exit()
+	
+if sys.argv[-1] == "install":
+	os.system('pip install Classy')
+	sys.exit()
+	
 
 setup(
 	name='Classy',

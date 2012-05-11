@@ -3,5 +3,5 @@ SHELL := /bin/bash
 publish:
 	python setup.py publish
 	
-alpha:
-	
+update:
+	python setup.py update

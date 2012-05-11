@@ -34,14 +34,15 @@ Features
 Installation
 ------------
 
-Fork/clone and pull the code to your local machine and run:
+To install on your machine: ::
 
 	$ pip install Classy
 	
-or
+or: ::
 
 	$ easy_install Classy
 
+(But you should use pip)
 
 
 Contribute
