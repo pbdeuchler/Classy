@@ -1,3 +1,2 @@
-include *.txt
+include *.txt README.rst LICENSE tests
 recursive-include docs *.txt
-include README.md LICENSE 
