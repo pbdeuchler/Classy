@@ -35,7 +35,11 @@ Installation
 
 Fork/clone and pull the code to your local machine and run:
 
-	$ make alpha
+	$ pip install Classy
+	
+or
+
+	$ easy_install Classy
 
 
 
