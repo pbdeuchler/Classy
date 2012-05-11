@@ -1,1 +1,2 @@
+v0.0.2, 5/10/12 -- First working code
 v0.0.1, 4/30/12 -- Initial release.
