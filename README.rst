@@ -52,6 +52,6 @@ Contribute
 README shamelessly ripped from `requests`_
 
 
-.. _`the repository`: https://github.com/pbdeuchler/Classy/
+.. _`repository`: https://github.com/pbdeuchler/Classy/
 .. _`AUTHORS`: https://github.com/pbdeuchler/Classy/blob/master/AUTHORS.rst
 .. _`requests`: https://github.com/kennethreitz/requests/
