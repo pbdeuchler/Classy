@@ -1,2 +1,2 @@
-include *.txt README.rst LICENSE tests
+include *.txt README.rst HISTORY.rst LICENSE
 recursive-include docs *.txt
