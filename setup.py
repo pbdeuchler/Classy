@@ -35,11 +35,11 @@ setup(
 	author='Philip Deuchler',
 	author_email='pbdeuchler@gmail.com',
 	packages=['Classy'],
-	package_data={'': ['LICENSE', 'README.rst']},
+	package_data={'': ['LICENSE', 'README']},
 	scripts=[],
 	url='http://pypi.python.org/pypi/classy/',
 	license=open('LICENSE.txt').read(),
 	description='Abstracted naive Bayes classifier for rest of us (Requires Python 2.7 or later)',
-	long_description=open('README.rst').read(),
+	long_description=open('README').read(),
 	install_requires=[],
 )
