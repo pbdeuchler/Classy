@@ -23,8 +23,8 @@ $$    $$/ $$ |$$    $$ |/     $$//     $$/ $$    $$ |
 """
 
 __title__ = 'Classy'
-__version__ = '0.0.9'
-__build__ = 0x0000008
+__version__ = '0.0.9.2'
+__build__ = 0x0000010
 __author__ = 'Philip Deuchler'
 __license__ = 'MIT'
 __copyright__ = 'Copyright 2012 Philip Deuchler'
