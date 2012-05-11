@@ -16,6 +16,7 @@
 
 from distutils.core import setup
 import os
+import sys
 
 
 if sys.argv[-1] == 'publish':
@@ -29,7 +30,7 @@ def get_file_contents(file_path):
 
 setup(
 	name='Classy',
-	version= classy.__version__,
+	version= Classy.__version__,
 	author='Philip Deuchler',
 	author_email='pbdeuchler@gmail.com',
 	packages=['classy', 'classy.Classy', 'classy.adapters'],
