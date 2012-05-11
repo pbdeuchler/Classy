@@ -15,6 +15,7 @@
 #  											   $$$$$$/ 
 
 from distutils.core import setup
+import Classy
 import os
 import sys
 
