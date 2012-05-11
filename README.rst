@@ -9,6 +9,7 @@ Classy is built for simplistic document classification, and is built with web ap
 the process down for you, so all you need to do is train it.
 
 ::
+
 	>>> c = Classy()
 	>>> c.train(['cpu', 'RAM', 'ALU', 'io', 'bridge', 'disk'], 'architecture')
 	True
