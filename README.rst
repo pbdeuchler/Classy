@@ -5,7 +5,7 @@ Bayes all the things!
 
 Classy is an MIT licensed library written in Python.
 
-Classy is built for simplistic document classification, and is built with web application usage in mind. Classy simplifies
+Classy is built for document classification with web application usage in mind. Classy simplifies
 the process down for you, so all you need to do is train it.
 
 ::
@@ -22,7 +22,7 @@ the process down for you, so all you need to do is train it.
 	('input_devices', -1.0986122886681098)
 	...
 
-Classy has been designed with dynamicism in mind, so it will work with any range of uses- blog entry categorization, ir systems, tag clouds, reccomendation engines and so on.
+Classy has been designed with flexibility in mind, so it will work with any range of uses- blog entry categorization, ir systems, tag clouds, recommendation engines and so on. Classy treats each document as a "bag of words" and is thus agnostic to content.
 
 
 Features
