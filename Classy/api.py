@@ -4,6 +4,8 @@ from __future__ import division
 from collections import Counter
 import math
 
+STOP_WORDS = ['a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from', 'has', 'he', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the', 'to', 'was', 'were', 'will', 'with']
+
 class ClassifierNotTrainedException(Exception):
 	
 	def __str__(self):
@@ -74,3 +76,14 @@ class Classy(object):
 		for class_id in self.data['class_doc_count']:
 			tmp = self.data['class_doc_count'][class_id] / self.total_doc_count
 			self.data['beta_priors'][class_id] = math.log(tmp)
+			
+	def clean_text(self, text_input, parse_stop_words=False, stop_list=STOP_WORDS):
+		term_vector = []
+		if parse_stop_words:
+			for term in text_input.split():
+				term_vector.insert(0, term)
+			return term_vector
+		for term in text_input.split():
+			if term not in stop_list:
+				term_vector.insert(0, term)
+		return term_vector	

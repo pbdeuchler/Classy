@@ -23,7 +23,7 @@ the process down for you, so all you need to do is train it.
 	...
 
 Classy has been designed with flexibility in mind, so it will work with any range of uses- blog entry categorization, ir systems,
-tag clouds, recommendation engines and so on. Classy treats each document as a "bag of words" and is thus agnostic to content.
+ tag clouds, recommendation engines and so on. Classy treats each document as a "bag of words" and is thus agnostic to content.
 
 
 Features
