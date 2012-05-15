@@ -2,6 +2,7 @@
 
 from __future__ import division
 from collections import Counter
+from multiprocessing import Pool
 import math
 
 STOP_WORDS = ['a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from', 'has', 'he', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the', 'to', 'was', 'were', 'will', 'with']
@@ -10,6 +11,9 @@ class ClassifierNotTrainedException(Exception):
 	
 	def __str__(self):
 		return "Classifier is not trained."
+		
+def unwrap_train(arg, **kwarg):
+	return Classy.train(*arg, **kwarg)
 
 class Classy(object):
 	
@@ -48,12 +52,12 @@ class Classy(object):
 			self.data['class_doc_count'][class_id] = 1
 		self.total_term_count += document_source.__len__()
 		self.total_doc_count += 1
-		self.compute_beta_priors()
 		return True
 		
 	def classify(self, document_input):
 		if not self.total_doc_count: raise ClassifierNotTrainedException()
 		
+		self.compute_beta_priors()
 		term_freq_matrix = Counter(document_input)
 		arg_max_matrix = []
 		for class_id in self.data['class_doc_count']:
