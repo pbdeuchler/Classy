@@ -2,6 +2,7 @@
 
 from __future__ import division
 from collections import Counter
+from multiprocessing import Pool
 import math
 
 STOP_WORDS = ['a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from', 'has', 'he', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the', 'to', 'was', 'were', 'will', 'with']
@@ -10,10 +11,22 @@ class ClassifierNotTrainedException(Exception):
 
 	def __str__(self):
 		return "Classifier is not trained."
+		
+class ClassifierNotAsyncException(Exception):
+
+	def __str__(self):
+		return "This classifier object is not async ready"
+
+def unwrap_train(arg, **kwarg):
+	return Classy.train(*arg, **kwarg)
 
 class Classy(object):
 
-	def __init__(self):
+	def __init__(self, async_process_count=False):
+		self.async = False
+		if async_process_count:
+			self.async = True
+			self.process_count = async_process_count
 		self.term_count_store = {}
 		self.data = {
 			'class_term_count': {},
@@ -22,6 +35,10 @@ class Classy(object):
 		}
 		self.total_term_count = 0
 		self.total_doc_count = 0
+		
+	def make_async(self, async_process_count=0):
+		self.async = True
+		self.process_count = async_process_count
 
 	def train(self, document_source, class_id):
 		'''
@@ -50,6 +67,9 @@ class Classy(object):
 		self.total_doc_count += 1
 		self.compute_beta_priors()
 		return True
+		
+	def async_train(self, document_sources, class_id):
+		if not self.async: raise ClassifierNotAsyncException()
 
 	def classify(self, document_input):
 		if not self.total_doc_count: raise ClassifierNotTrainedException()
