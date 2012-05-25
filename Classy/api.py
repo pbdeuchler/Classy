@@ -79,7 +79,7 @@ class Classy(object):
 			
 	def clean_text(self, text_input, parse_stop_words=True, stop_list=STOP_WORDS):
 		term_vector = []
-		if parse_stop_words:
+		if not parse_stop_words:
 			for term in text_input.split():
 				term_vector.insert(0, term)
 			return term_vector
