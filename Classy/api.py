@@ -5,6 +5,10 @@ from collections import Counter
 import threading
 import math
 
+'''
+Abandoning this branch for now, as I don't think any type of multiprocessing will provide real performance gains due to the GIL
+'''
+
 STOP_WORDS = ['a', 'an', 'and', 'are', 'as', 'at', 'be', 'by', 'for', 'from', 'has', 'he', 'in', 'is', 'it', 'its', 'of', 'on', 'that', 'the', 'to', 'was', 'were', 'will', 'with']
 
 class ClassifierNotTrainedException(Exception):
