@@ -48,7 +48,7 @@ class Classy(object):
 			self.data['class_doc_count'][class_id] = 1
 		self.total_term_count += document_source.__len__()
 		self.total_doc_count += 1
-		self.compute_beta_priors()
+		self._compute_beta_priors()
 		return True
 
 	def classify(self, document_input):
@@ -70,7 +70,7 @@ class Classy(object):
 		arg_max_matrix.sort(key=lambda x:x[1])
 		return (arg_max_matrix[-1][0], arg_max_matrix[-1][1])
 
-	def compute_beta_priors(self):
+	def _compute_beta_priors(self):
 		if not self.total_doc_count: raise ClassifierNotTrainedException()
 
 		for class_id in self.data['class_doc_count']:
