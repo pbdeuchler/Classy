@@ -2,4 +2,8 @@ venv
 *.pyc
 *.tgz
 MANIFEST
-dist/*
+dist
+javascripts
+stylesheets
+params.json
+index.html
