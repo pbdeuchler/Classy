@@ -26,7 +26,6 @@ class Classy(object):
 	def train(self, document_source, class_id):
 		'''
 		Trains the classifier.
-
 		'''
 		count = Counter(document_source)
 		try:
